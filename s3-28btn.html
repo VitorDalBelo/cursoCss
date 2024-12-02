@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>s3-28btn</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #222;
+        }
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 25px;
+            color:#f6b93b;
+            letter-spacing: 3px;
+            padding: 25px 50px;
+            border: 3px solid #f6b93b;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; 
+            transition: all 0.2s;
+            position: relative;
+        }
+        a:hover{
+            color: #222;
+        }
+        a::before,a::after,span::after,span::before{
+            content: "";
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: #f6b93b;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+        a::before{
+            top: 0;
+            left: -25%;
+        }
+        a:hover::before{
+            left: 0;
+        }
+        a::after{
+            top: -100%;
+            left: 25%;
+        }
+        a:hover::after{
+            top: 0;
+        }
+        a span::before{
+            top:100%;
+            right: 25%;
+        }
+
+        a:hover span::before{
+            top:0
+        }
+
+        a span::after{
+            top:0;
+            right: -25%
+        }
+
+
+        a:hover span::after{
+            right:0
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <a href="#"><span>hover me</span></a>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>s3-25btn</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+            font-family: sans-serif;
+        }
+        a{
+            padding: 20px 40px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 4px;
+            color:#ff0;
+            border: 3px solid #ff0;
+            font-size: 30px;
+            position: relative;
+        }
+        a::before{
+            content: "button";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #363636;
+            color: #ff0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+        }
+        a:hover::before{
+            left: 100%;
+            transform: scale(0) rotateY(360deg);
+            opacity: 0;
+        }
+        a::after{
+            content: "button";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #363636;
+            color: #ff0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0) rotateY(360deg);
+            transition: all 0.5s;
+        }
+        a:hover::after{
+            left: 0;
+            transform: scale(1) rotateY(0deg);
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="#">button</a>
+</body>
+</html>
